@@ -1,25 +1,25 @@
 /*------------------------- Pre-Configuration ----------------------------*/
-#define W5500           5500
-#define W5100           5100
-#define ETHER_TYPE      W5500
-#define ENABLE_DHCP     false
-#define ENABLE_EXTERNAL_WATCHDOG   true
-#define _DEBUG_LEVEL    1
+#define W5500                       5500
+#define W5100                       5100
+#define ETHER_TYPE                  W5500
+#define ENABLE_DHCP                 false
+#define ENABLE_EXTERNAL_WATCHDOG    true
+#define _DEBUG_LEVEL                1
 
-#define BROKER_IP       192,168,1,50
+#define BROKER_IP                   192,168,1,50
 
-#define HOST_IP         192,168,1,163
-#define HOST_NETMASK    255,255,255,0
-#define HOST_DNS        192,168,1,1
-#define HOST_GATEWAY    192,168,1,1
+#define HOST_IP                     192,168,1,163
+#define HOST_NETMASK                255,255,255,0
+#define HOST_DNS                    192,168,1,1
+#define HOST_GATEWAY                192,168,1,1
 
-#define MAC_REFRESH     false
-#define MAC_0           0xDA
-#define MAC_1           0x00
-#define MAC_2           0x00
-#define MAC_3           0x00
-#define MAC_4           0x00
-#define MAC_5           0x00
+#define MAC_REFRESH                 false
+#define MAC_0                       0xDA
+#define MAC_1                       0x00
+#define MAC_2                       0x00
+#define MAC_3                       0x00
+#define MAC_4                       0x00
+#define MAC_5                       0x00
 
 /*------------------------------- Start ----------------------------------*/
 #include <SPI.h>
@@ -32,7 +32,7 @@
 #endif
 #include "Wire.h"
 /*----------------------------- Watch dog --------------------------------*/
-#define WATCHDOG_PIN                    7
+#define WATCHDOG_PIN                    12
 #define WATCHDOG_PULSE_LENGTH           50        // Milliseconds
 #define WATCHDOG_RESET_INTERVAL         5000      // Milliseconds. Also the period for sensor reports.
 long watchdogLastResetTime = 0;
