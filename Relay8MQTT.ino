@@ -32,9 +32,13 @@
 #endif
 #include "Wire.h"
 /*----------------------------- Watch dog --------------------------------*/
+#if (ETHER_TYPE == W5500)
 #define WATCHDOG_PIN                    12
+#else
+#define WATCHDOG_PIN                    7
+#endif
 #define WATCHDOG_PULSE_LENGTH           50        // Milliseconds
-#define WATCHDOG_RESET_INTERVAL         5000      // Milliseconds. Also the period for sensor reports.
+#define WATCHDOG_RESET_INTERVAL         20000      // Milliseconds. Also the period for sensor reports.
 long watchdogLastResetTime = 0;
 
 /*-------------------------- Get MAC address -----------------------------*/
